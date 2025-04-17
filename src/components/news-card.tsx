@@ -25,10 +25,10 @@ export default function NewsCard({ article, variant = "default" }: NewsCardProps
                                     alt={title}
                                     fill
                                     className="object-cover"
-                                    onError={(e) => {
-                                        // Replace broken images with placeholder
-                                        ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=96&width=96"
-                                    }}
+                                // onError={(e) => {
+                                //     // Replace broken images with placeholder
+                                //     ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=96&width=96"
+                                // }}
                                 />
                             </div>
                         )}
@@ -59,10 +59,10 @@ export default function NewsCard({ article, variant = "default" }: NewsCardProps
                             alt={title}
                             fill
                             className="object-cover"
-                            onError={(e) => {
-                                // Replace broken images with placeholder
-                                ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=192&width=384"
-                            }}
+                        // onError={(e) => {
+                        //     // Replace broken images with placeholder
+                        //     ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=192&width=384"
+                        // }}
                         />
                     </div>
                 )}

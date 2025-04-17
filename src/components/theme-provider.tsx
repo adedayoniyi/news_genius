@@ -1,35 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import type { ThemeProviderProps } from "next-themes"
 
-import type React from "react"
-import { useTheme as useNextTheme } from "next-themes"
-
-type Theme = "dark" | "light" | "system"
-
-type ThemeProviderProps = {
-    children: React.ReactNode
-    defaultTheme?: Theme
-    enableSystem?: boolean
-    storageKey?: string
-    attribute?: string
-    disableTransitionOnChange?: boolean
-}
-
-export function ThemeProvider({
-    children,
-    defaultTheme = "system",
-    enableSystem = true,
-    storageKey = "theme",
-    attribute = "class",
-    disableTransitionOnChange = false,
-}: ThemeProviderProps) {
-    const { theme, setTheme, resolvedTheme, systemTheme } = useNextTheme({
-        defaultTheme,
-        enableSystem,
-        storageKey,
-        attribute,
-        disableTransitionOnChange,
-    })
-
-    return children
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+    return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }

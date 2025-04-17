@@ -64,9 +64,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         alt={title}
                         fill
                         className="object-cover"
-                        onError={(e) => {
-                            ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=500&width=1000"
-                        }}
+                        // onError={(e) => {
+                        //     ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=500&width=1000"
+                        // }}
                         priority
                     />
                 </div>

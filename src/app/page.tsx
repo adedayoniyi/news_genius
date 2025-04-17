@@ -57,11 +57,11 @@ export default async function Home() {
         </div>
       </section>
 
-      <Tabs defaultValue="world" className="space-y-4">
+      <Tabs defaultValue="business" className="space-y-4">
         <div className="flex items-center justify-between">
           <TabsList>
-            <TabsTrigger value="world">World</TabsTrigger>
             <TabsTrigger value="business">Business</TabsTrigger>
+            <TabsTrigger value="world">World</TabsTrigger>
             <TabsTrigger value="technology">Technology</TabsTrigger>
             <TabsTrigger value="science">Science</TabsTrigger>
             <TabsTrigger value="health">Health</TabsTrigger>

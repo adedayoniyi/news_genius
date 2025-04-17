@@ -40,9 +40,9 @@ export default async function RelatedArticles({ articleUrl }: RelatedArticlesPro
                                             alt={article.title}
                                             fill
                                             className="object-cover"
-                                            onError={(e) => {
-                                                ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=64&width=64"
-                                            }}
+                                        // onError={(e) => {
+                                        //     ; (e.target as HTMLImageElement).src = "/placeholder.svg?height=64&width=64"
+                                        // }}
                                         />
                                     </div>
                                 )}
